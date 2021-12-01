@@ -1,12 +1,23 @@
 const fs = require("fs");
-let input;
+let inputAsStrings;
+let input = [];
 let larger = 0;
+
 fs.readFile("input.txt", "utf8", function (err, data) {
-  input = data.split("\n");
-  for (let i = 0; i < input.length - 1; i++) {
-    if (parseInt(input[i]) < parseInt(input[i + 1])) {
+  inputAsStrings = data.split("\n");
+  inputAsStrings.forEach((e) => {
+    input.push(parseInt(e));
+  });
+
+  let previousSum = -1;
+  let currentSum = 0;
+
+  for (let i = 0; i < input.length - 2; i++) {
+    currentSum = input[i] + input[i + 1] + input[i + 2];
+    if (currentSum > previousSum && previousSum !== -1) {
       larger++;
     }
+    previousSum = currentSum;
   }
   console.log(larger);
 });
