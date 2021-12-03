@@ -6,6 +6,7 @@ let ones = 0;
 let gammaRate = "";
 let epsilonRate = "";
 
+// Read input
 fs.readFile("input.txt", "utf8", function (err, data) {
   input = data.split("\n");
   for (let i = 0; i < input[0].split("").length; i++) {
