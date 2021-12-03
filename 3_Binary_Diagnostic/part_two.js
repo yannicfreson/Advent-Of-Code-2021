@@ -9,10 +9,7 @@ let oxScrubRate = "";
 
 fs.readFile("input.txt", "utf8", function (err, data) {
   input = data.split("\n");
-
-  // Yeet empty line at the end away
   input.pop();
-
   output = input;
 
   // Oxygen Generator:

@@ -3,7 +3,6 @@ let inputAsStrings;
 let input = [];
 let larger = 0;
 
-// Read input
 fs.readFile("input.txt", "utf8", function (err, data) {
   inputAsStrings = data.split("\n");
   inputAsStrings.forEach((e) => {
