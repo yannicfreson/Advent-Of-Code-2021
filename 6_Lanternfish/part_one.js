@@ -8,7 +8,6 @@ fs.readFile("input.txt", "utf8", function (err, data) {
   input.forEach((i) => fish.push(Number(i)));
 
   // Go through day
-  // console.log(fish.join(","));
   for (let days = 0; days < 80; days++) {
     let newFish = 0;
     for (let i = 0; i < fish.length; i++) {
